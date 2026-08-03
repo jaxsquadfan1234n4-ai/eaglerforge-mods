@@ -1,9 +1,7 @@
-let fireStaffLoaded = false;
+ModAPI.addEventListener("update", function () {
+    if (window.fireStaffLoaded) return;
 
-ModAPI.addEventListener("update", () => {
-    if (fireStaffLoaded) return;
-
-    fireStaffLoaded = true;
+    window.fireStaffLoaded = true;
 
     ModAPI.displayToChat({
         msg: "FIRE STAFF MOD LOADED!"
