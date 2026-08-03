@@ -1,18 +1,20 @@
-let started = false;
+let fireStaffLoaded = false;
 
 ModAPI.addEventListener("update", () => {
-if (!started) {
-started = true;
+if (fireStaffLoaded) return;
 
 ```
-    ModAPI.displayToChat({
-        msg: "§6🔥 §cFIRE STAFF ACTIVATED! §6🔥"
-    });
+fireStaffLoaded = true;
 
-    ModAPI.displayToChat({
-        msg: "§eThe staff is burning with magical fire!"
-    });
-}
+ModAPI.displayToChat({
+    msg: ModAPI.uwuify({
+        string: "FIRE STAFF MOD LOADED!"
+    })
+});
+
+ModAPI.displayToChat({
+    msg: "§6The Fire Staff is ready!"
+});
 ```
 
 });
